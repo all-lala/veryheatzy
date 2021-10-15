@@ -16,7 +16,7 @@ class RoutesApi {
 }
 
 export default class HetzyApiProvider {
-  static readonly BASE_HEATZY_API_URL = "http://euapi.gizwits.com/app/";
+  static readonly BASE_HEATZY_API_URL = "https://euapi.gizwits.com/app/";
   static readonly BASE_HEATZY_API_HEADER = {
     "X-Gizwits-Application-Id": "c70a66ff039d41b4a220e198b0fcc8b3",
   };

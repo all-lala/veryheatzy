@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="device-info">
+  <div class="device-info">
+    <div class="header-info">
       <h2>{{ device.alias }}</h2>
       <div class="modes">
         <font-awesome-icon
@@ -138,15 +138,19 @@ export default class DeviceInfosComponent extends Vue {
 }
 
 .device-info {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.header-info {
   background-color: rgb(223, 223, 223);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-radius: 1rem;
   padding: 0 2rem 0 2rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s ease;
 }
 
 .device-info:hover {
@@ -209,11 +213,15 @@ export default class DeviceInfosComponent extends Vue {
 
 .content {
   max-height: 500px;
-  background-color: rgb(195, 221, 255);
+  background-color: rgb(63 119 80);
   padding: 1rem;
   border-radius: 0 0 1rem 1rem;
   overflow: hidden;
   transform-origin: top;
+}
+
+.content h2 {
+  color: white;
 }
 
 .schedules {
