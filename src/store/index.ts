@@ -84,6 +84,7 @@ export default new Vuex.Store<StoreState>({
         (data) => {
           if (data?.token) {
             dispatch(StoreActions.setToken, data.token);
+            Promise.resolve();
           } else {
             Promise.reject();
           }
