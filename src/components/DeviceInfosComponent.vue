@@ -1,7 +1,7 @@
 <template>
   <div class="device-info">
     <div class="header-info">
-      <h2>{{ device.alias }}</h2>
+      <h2 class="alias">{{ device.alias }}</h2>
       <div class="modes">
         <font-awesome-icon
           class="icon-mode"
@@ -137,6 +137,10 @@ export default class DeviceInfosComponent extends Vue {
   --icon-error: 0;
 }
 
+.alias {
+  overflow: hidden;
+}
+
 .device-info {
   border-radius: 1rem;
   overflow: hidden;
@@ -149,7 +153,7 @@ export default class DeviceInfosComponent extends Vue {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem 0 2rem;
+  padding: 0 1rem 0 1rem;
   transition: all 0.3s ease;
 }
 
@@ -192,9 +196,9 @@ export default class DeviceInfosComponent extends Vue {
   display: flex;
   justify-content: space-around;
   font-size: 1.5rem;
-  gap: 2rem;
+  gap: 1rem;
   margin-left: auto;
-  margin-right: 3rem;
+  margin-right: 2rem;
 }
 
 .volet {
