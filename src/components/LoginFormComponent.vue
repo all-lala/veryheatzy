@@ -32,7 +32,7 @@ export default class LoginFormComponent extends Vue {
         password: this.password,
       })
       .catch((e) => {
-        console.log(e);
+        console.error(e);
       });
   }
 }
