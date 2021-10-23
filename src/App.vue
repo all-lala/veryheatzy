@@ -15,13 +15,7 @@ export default class App extends Vue {
     const username = query.username;
     const password = query.password;
     if (username && password) {
-      this.$store
-        .dispatch(StoreActions.getToken, { username, password })
-        .then(() => {
-          this.$store.dispatch(StoreActions.getBindings);
-        });
-    } else {
-      this.$store.dispatch(StoreActions.getBindings);
+      this.$store.dispatch(StoreActions.getToken, { username, password });
     }
   }
 }

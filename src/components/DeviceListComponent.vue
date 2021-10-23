@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import Device from "@/models/device.model";
+import { StoreActions } from "@/store";
 import { Component, Vue } from "vue-property-decorator";
 import DeviceInfosComponent from "./DeviceInfosComponent.vue";
 
@@ -15,6 +16,10 @@ import DeviceInfosComponent from "./DeviceInfosComponent.vue";
   components: { DeviceInfosComponent },
 })
 export default class DeviceListComponent extends Vue {
+  beforeMount(): void {
+    this.$store.dispatch(StoreActions.getBindings);
+  }
+
   get devices(): Device[] {
     return this.$store.state.devices;
   }
